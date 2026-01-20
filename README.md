@@ -1,8 +1,8 @@
-# HiPEAC 2025 CHERI tutorial
+# HiPEAC 2026 CHERI tutorial
 
 This repository is available and can be viewed to render Markdown files at:
 
-https://github.com/CTSRD-CHERI/hipeac25-cheri-tutorial
+https://github.com/CTSRD-CHERI/cheri-tutorial-hipeac26
 
 The repository includes two examples and three exercises on:
 
