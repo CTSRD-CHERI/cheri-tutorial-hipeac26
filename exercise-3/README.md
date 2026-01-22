@@ -4,20 +4,20 @@
 
 * Compile a program vulnerable to stack corruption
   * Demonstrate the vulnerability
-* Enable linkage-based compartmentalisation
+* Run the same program with linkage-based compartmentalisation
   * Show that the vulnerability is mitigated
 * Use `gdb` to understand why the vulnerability is mitigated
   * Backtrace: `bt`
   * List compartments: `info compartments`
- 
+
 ## Instructions
 
-1. Run `make normal` to build the vulnerable program.
-   * Run `./normal`.
+1. Make sure you are using a toolchain that supports compartmentalisation policies.
+1. Run `make all` to build two versions of the vulnerable program---one normal and one compartmentalised.
+2. Run the normal version with `./normal`.
    * What stack addresses do you see? Can you reach one from the other?
    * Can you successfully corrupt data in the caller's frame from the callee?
-2. Now run `make compart` to build the compartmentalised program.
-   * Run `./compart`.
+3. Run the compartmentalised version with `./compart`.
    * What stack addresses do you see? Can you reach one from the other?
    * It is impossible to corrupt data in the caller's frame from the callee. Why?
 

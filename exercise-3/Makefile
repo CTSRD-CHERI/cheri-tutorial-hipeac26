@@ -1,7 +1,8 @@
-normal: main.c f.c
-	cc -g main.c f.c -o normal
-
-compart: main.c f.c
-	cc -g f.c -shared -o f.so
-	cc -g main.c f.so -o compart -Wl,-rpath=.
+all: main.c policy.txt
+	cc -g main.c -o normal -Wl,--compartment-policy=policy.txt
+	cp normal compart
+	elfctl -e +nocheric18n ./normal
 	elfctl -e +cheric18n ./compart
+
+clean:
+	rm -f main compart main.core
