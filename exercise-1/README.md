@@ -97,9 +97,3 @@ start of a current allocation.
 Further temporal safety also requires quarantining freed memory until all
 pointers to it have been revoked.
 
-## Source Files
-
-**cheri-allocator.c**
-```C
-{{#include cheri-allocator.c}}
-```
