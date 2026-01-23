@@ -22,6 +22,6 @@ int main() {
 	printf("buf = %s\n", buf);
 	printf("&buf = %#p\n", buf);
 	f();
-	printf("&buf = %#p\n", buf);
+	printf("buf = %s\n", buf);
 	return 0;
 }
